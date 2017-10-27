@@ -28,6 +28,7 @@ namespace MatchClass
 
                         break;
                     case ')':
+                        stack.Pop();
 
                         break;
                     default:
