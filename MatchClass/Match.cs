@@ -19,6 +19,7 @@ namespace MatchClass
             //2.if stack has no ( but if ) entered, it fails
             //3.finally when the string is parsed completely the stack should be empty
 
+            int indexOfEnteredOpenParen = 0;
             for (int i = 0; i < input.Length; i++)
             {
                 switch (input[i])
@@ -28,7 +29,7 @@ namespace MatchClass
 
                         break;
                     case ')':
-                        stack.Pop();
+                        indexOfEnteredOpenParen = stack.Any() ? stack.Pop() : -1;
 
                         break;
                     default:
