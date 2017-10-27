@@ -29,7 +29,8 @@ namespace MatchClass
                         isMatched = false;
                         break;
                     case ')':
-                        indexOfEnteredOpenParen = stack.Any() ? stack.Pop() : -1;
+                        indexOfEnteredOpenParen = stack.Any() ? 0 : -1;
+                        if (indexOfEnteredOpenParen == 0) stack.Pop();
                         isMatched = (indexOfEnteredOpenParen == 0);
                         break;
                     default:
