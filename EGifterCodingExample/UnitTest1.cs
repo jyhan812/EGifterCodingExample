@@ -16,5 +16,15 @@ namespace EGifterCodingExample
 
             Assert.AreEqual(true, match.DoMatch(testInput));
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            string testInput = ")(";
+
+            Match match = new Match();
+
+            Assert.AreEqual(false, match.DoMatch(testInput));
+        }
     }
 }
