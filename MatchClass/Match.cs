@@ -10,7 +10,7 @@ namespace MatchClass
     {
         public bool DoMatch(string input)
         {
-            bool isMatched = true;
+            bool isMatched = false;
 
             Stack<int> stack = new Stack<int>();
 
@@ -26,14 +26,14 @@ namespace MatchClass
                 {
                     case '(':
                         stack.Push(i);
-
+                        isMatched = false;
                         break;
                     case ')':
                         indexOfEnteredOpenParen = stack.Any() ? stack.Pop() : -1;
-
+                        isMatched = (indexOfEnteredOpenParen == 0);
                         break;
                     default:
-
+                        isMatched = false;
                         break;
                 }
 
