@@ -8,5 +8,13 @@ namespace MatchClass
 {
     public class Match
     {
+        public bool DoMatch(string input)
+        {
+            bool isMatched = true;
+
+
+
+            return isMatched;
+        }
     }
 }
