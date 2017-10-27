@@ -36,5 +36,16 @@ namespace EGifterCodingExample
 
             Assert.AreEqual(false, match.DoMatch(testInput));
         }
+
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            string testInput = "((45+)*a3)";
+
+            Match match = new Match();
+
+            Assert.AreEqual(true, match.DoMatch(testInput));
+        }
     }
 }
