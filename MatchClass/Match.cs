@@ -24,6 +24,7 @@ namespace MatchClass
                 switch (input[i])
                 {
                     case '(':
+                        stack.Push(i);
 
                         break;
                     case ')':
